@@ -1,26 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Popins:wght@300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
+@import "tw-animate-css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --radius: 0.75rem;
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --card: #111111;
+  --card-foreground: #ffffff;
+  --popover: #111111;
+  --popover-foreground: #ffffff;
+  --primary: #ffffff;
+  --primary-foreground: #0a0a0a;
+  --secondary: #1a1a1a;
+  --secondary-foreground: #ffffff;
+  --muted: #1a1a1a;
+  --muted-foreground: #a1a1aa;
+  --accent: #1a1a1a;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #262626;
+  --input: #262626;
+  --ring: #ffffff;
+  --chart-1: #667eea;
+  --chart-2: #764ba2;
+  --chart-3: #f093fb;
+  --chart-4: #f5576c;
+  --chart-5: #4facfe;
+  --sidebar: #111111;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #667eea;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1a1a1a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #262626;
+  --sidebar-ring: #667eea;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  * {
+    font-family: 'Popins', sans-serif;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Better focus styles */
+  *:focus-visible {
+    @apply outline-2 outline-[#6017EA] outline-offset-2;
+  }
+
+  /* Improved button styles */
+  button {
+    @apply transition-all duration-200;
+  }
+
+  /* Better input styles */
+  input, textarea, select {
+    @apply transition-all duration-200;
+  }
+
+  /* Enhanced link styles */
+  a {
+    @apply transition-colors duration-200;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom animations */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Enhanced hover effects */
+.hover-lift {
+  @apply transition-transform duration-300;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, #6017EA 0%, #4F14B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .container {
+    @apply px-4;
+  }
+}
+
+/* Enhanced focus states for accessibility */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-[#6017EA] focus:ring-offset-2 focus:ring-offset-background;
+}
+
+/* Smooth transitions for all interactive elements */
+.interactive {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-[#6017EA] hover:bg-[#4F14B8] text-white font-semibold px-6 py-3 rounded-lg transition-all duration-200 shadow-lg hover:shadow-[#6017EA]/25 focus:ring-2 focus:ring-[#6017EA] focus:ring-offset-2 focus:ring-offset-background;
+}
+
+.btn-secondary {
+  @apply bg-transparent border border-border text-foreground hover:border-[#6017EA] hover:text-[#6017EA] font-medium px-6 py-3 rounded-lg transition-all duration-200;
+}
+
+/* Card styles */
+.card {
+  @apply bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:border-[#6017EA]/50 hover:shadow-lg;
+}
+
+/* Section spacing */
+.section {
+  @apply py-16 sm:py-20 px-4 sm:px-6;
+}
+
+/* Container max-widths */
+.container-sm {
+  @apply max-w-4xl mx-auto;
+}
+
+.container-md {
+  @apply max-w-5xl mx-auto;
+}
+
+.container-lg {
+  @apply max-w-6xl mx-auto;
+}
+
+.container-xl {
+  @apply max-w-7xl mx-auto;
+}
+
+/* Animated gradient glow */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gradient-glow {
+  background: linear-gradient(45deg, #6017EA, #4F14B8, #6017EA, #4F14B8);
+  background-size: 400% 400%;
+  animation: gradient-shift 3s ease infinite;
+  opacity: 0.05;
+}
+
+.gradient-glow:hover {
+  opacity: 0.1;
+  animation-duration: 2s;
 }
