@@ -21,7 +21,7 @@ import {
   Menu,
   MessageCircle
 } from "lucide-react";
-import { fadeInUp, scaleIn, staggerContainer, hoverScale, hoverLift } from "@/lib/animations";
+import { fadeInUp, scaleIn, staggerContainer } from "@/lib/animations";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -637,7 +637,7 @@ export default function Home() {
                           <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                         ))}
                       </div>
-                      <p className="text-muted-foreground italic text-sm mb-2">"{projects[currentProjectIndex].testimonial.text}"</p>
+                      <p className="text-muted-foreground italic text-sm mb-2">&ldquo;{projects[currentProjectIndex].testimonial.text}&rdquo;</p>
                       <p className="text-white font-medium text-sm">
                         {projects[currentProjectIndex].testimonial.name}
                         <span className="text-muted-foreground ml-2">• {projects[currentProjectIndex].testimonial.company}</span>
@@ -700,7 +700,7 @@ export default function Home() {
                           <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                         ))}
                       </div>
-                      <p className="text-muted-foreground italic text-sm mb-2">"{projects[currentProjectIndex].testimonial.text}"</p>
+                      <p className="text-muted-foreground italic text-sm mb-2">&ldquo;{projects[currentProjectIndex].testimonial.text}&rdquo;</p>
                       <p className="text-white font-medium text-sm">
                         {projects[currentProjectIndex].testimonial.name}
                         <span className="text-muted-foreground ml-1">• {projects[currentProjectIndex].testimonial.company}</span>
@@ -805,7 +805,7 @@ export default function Home() {
                 Ready to Get More Clients?
               </h2>
               <p className="text-muted-foreground text-xl sm:text-2xl leading-relaxed max-w-3xl mx-auto font-medium">
-                Let's have a focused 30-minute discussion about your business goals. 
+                Let&apos;s have a focused 30-minute discussion about your business goals. 
                 Prefer email? Reach out at{' '}
                 <a 
                   href="mailto:christianthodesign@gmail.com" 
@@ -1033,7 +1033,7 @@ export default function Home() {
                 )}
 
                 <p className="text-xs text-muted-foreground text-center">
-                  By clicking "Send message", you agree to our{' '}
+                  By clicking &ldquo;Send message&rdquo;, you agree to our{' '}
                   <a 
                     href="https://ctho.work/privacy" 
                     target="_blank" 
