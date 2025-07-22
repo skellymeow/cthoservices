@@ -34,19 +34,20 @@ export default function OurWork() {
             className="rounded-2xl shadow-xl object-cover w-full max-h-[520px] bg-muted transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl hover:shadow-[#6017EA]/20"
           />
         </Link>
-        <Link href="https://csgocases.codes/" target="_blank" rel="noopener noreferrer" className="block w-full max-w-3xl px-4 mt-10">
+        
+        <Link href="https://orthoticsnow.godaddysites.com/" target="_blank" rel="noopener noreferrer" className="block w-full max-w-3xl px-4 mt-10">
           <Image
-            src="/gaming-affiliate.jpg"
-            alt="CSGO Cases Codes Website"
+            src="/orthoticsnowmodern2.png"
+            alt="Orthotics Now Modern Website"
             width={1200}
             height={800}
             className="rounded-2xl shadow-xl object-cover w-full max-h-[520px] bg-muted transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl hover:shadow-[#6017EA]/20"
           />
         </Link>
-        <Link href="https://orthoticsnow.godaddysites.com/" target="_blank" rel="noopener noreferrer" className="block w-full max-w-3xl px-4 mt-10">
+        <Link href="https://csgocases.codes/" target="_blank" rel="noopener noreferrer" className="block w-full max-w-3xl px-4 mt-10">
           <Image
-            src="/orthoticsnowmodern2.png"
-            alt="Orthotics Now Modern Website"
+            src="/gaming-affiliate.jpg"
+            alt="CSGO Cases Codes Website"
             width={1200}
             height={800}
             className="rounded-2xl shadow-xl object-cover w-full max-h-[520px] bg-muted transition-transform duration-300 hover:scale-[1.025] hover:shadow-2xl hover:shadow-[#6017EA]/20"
