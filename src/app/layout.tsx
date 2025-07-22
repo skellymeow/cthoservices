@@ -17,9 +17,9 @@ export const metadata: Metadata = {
   title: "Book Christian Thompson – Custom Websites & Lead Gen",
   description: "Book a call to get a real website, landing page, or lead gen system built by Christian Thompson. Fast, clean, no agency overhead. Southern Ontario & remote.",
   icons: {
-    icon: '/icon1.ico',
-    shortcut: '/icon1.ico',
-    apple: '/icon1.ico',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
   metadataBase: new URL('https://start.ctho.work'),
   openGraph: {

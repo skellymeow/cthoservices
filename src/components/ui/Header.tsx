@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { Menu, ArrowRight } from "lucide-react";
 
 interface HeaderProps {
-  onOpenContactModal: () => void;
+  onOpenContactModal?: () => void;
 }
 
 export default function Header({ onOpenContactModal }: HeaderProps) {
@@ -37,13 +37,15 @@ export default function Header({ onOpenContactModal }: HeaderProps) {
             </Link>
           </nav>
           {/* Desktop CTA */}
-          <button
-            className="hidden md:flex items-center gap-2 bg-[#6017EA] hover:bg-[#4F14B8] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-[#6017EA]/25 text-sm"
-            onClick={onOpenContactModal}
-          >
-            Contact us
-            <ArrowRight className="w-4 h-4 flex-shrink-0" />
-          </button>
+          {onOpenContactModal && (
+            <button
+              className="hidden md:flex items-center gap-2 bg-[#6017EA] hover:bg-[#4F14B8] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-[#6017EA]/25 text-sm"
+              onClick={onOpenContactModal}
+            >
+              Contact us
+              <ArrowRight className="w-4 h-4 flex-shrink-0" />
+            </button>
+          )}
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -68,13 +70,15 @@ export default function Header({ onOpenContactModal }: HeaderProps) {
               >
                 View Our Work
               </Link>
-              <button
-                className="w-full bg-[#6017EA] hover:bg-[#4F14B8] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-[#6017EA]/25 text-sm flex items-center justify-center gap-2 mt-4"
-                onClick={onOpenContactModal}
-              >
-                Contact us
-                <ArrowRight className="w-4 h-4 flex-shrink-0" />
-              </button>
+              {onOpenContactModal && (
+                <button
+                  className="w-full bg-[#6017EA] hover:bg-[#4F14B8] text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-[#6017EA]/25 text-sm flex items-center justify-center gap-2 mt-4"
+                  onClick={onOpenContactModal}
+                >
+                  Contact us
+                  <ArrowRight className="w-4 h-4 flex-shrink-0" />
+                </button>
+              )}
             </div>
           </motion.div>
         )}

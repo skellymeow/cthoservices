@@ -114,7 +114,7 @@ export default function Home() {
       {/* Website Sprint Offer Section */}
       <section className="section flex flex-col items-center justify-center">
         <div className="container-sm text-center flex flex-col items-center justify-center">
-          <h2 className="text-5xl font-bold text-foreground mb-6">Website Sprint — $1,750 CAD once</h2>
+          <h2 className="text-5xl font-bold text-foreground mb-6">Website Sprint — $1,750 one-time</h2>
           <p className="text-base text-muted-foreground font-medium mb-8 max-w-2xl mx-auto">
             Everything you need to get online, fast — no fluff, no upsells.
           </p>
@@ -127,7 +127,7 @@ export default function Home() {
             <li className="flex items-center gap-4 text-base"><Users className="w-6 h-6 text-[#6017EA] flex-shrink-0" /><span><span className="font-semibold text-foreground">1:1 workflow</span> <span className="text-muted-foreground">— you work directly with me, Christian</span></span></li>
             <li className="flex items-center gap-4 text-base"><Repeat className="w-6 h-6 text-[#6017EA] flex-shrink-0" /><span><span className="font-semibold text-foreground">Two revision rounds</span></span></li>
             <li className="flex items-center gap-4 text-base"><Rocket className="w-6 h-6 text-[#6017EA] flex-shrink-0" /><span><span className="font-semibold text-foreground">Launch + 2 weeks of post-launch support</span></span></li>
-            <li className="flex items-center gap-4 text-base"><Server className="w-6 h-6 text-[#6017EA] flex-shrink-0" /><span><span className="font-semibold text-foreground">Hosting:</span> <span className="text-muted-foreground">$25/mo (fully managed, blazing fast, no branding)</span></span></li>
+            <li className="flex items-center gap-4 text-base"><Server className="w-6 h-6 text-[#6017EA] flex-shrink-0" /><span><span className="font-semibold text-foreground">Hosting:</span> <span className="text-muted-foreground">from $20/mo (fully managed, blazing fast, no branding)</span></span></li>
           </ul>
           <div className="text-base text-muted-foreground font-medium mb-6">Timeline: <span className="text-foreground font-semibold">2–3 weeks</span> start to finish</div>
           <div className="flex flex-row items-center justify-center gap-4 mt-2">
@@ -182,12 +182,10 @@ export default function Home() {
       <section className="section flex flex-col items-center justify-center">
         <div className="container-sm text-center flex flex-col items-center justify-center">
           <div className="flex flex-col items-center mb-5">
-            <div className="w-24 h-24 rounded-full overflow-hidden mb-4 bg-card flex items-center justify-center">
-              
-            </div>
+            
             <h2 className="text-5xl font-bold text-foreground mb-6">Meet Your Builder</h2>
             <div className="flex items-center gap-4 justify-center mb-2">
-              <span className="inline-flex items-center bg-muted px-3 py-1 rounded-full text-sm font-semibold text-foreground"><Twitter className="w-6 h-6 mr-2 text-[#1da1f2] flex-shrink-0" />@43skell</span>
+              <a href="https://x.com/43skell" target="_blank" className="inline-flex items-center bg-muted px-3 py-1 rounded-full text-sm font-semibold text-foreground"><Twitter className="w-6 h-6 mr-2 text-[#1da1f2] flex-shrink-0" />@43skell</a>
               <CheckCircle className="w-6 h-6 text-[#6017EA] flex-shrink-0" />
             </div>
           </div>
